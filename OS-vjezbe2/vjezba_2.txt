@@ -1,0 +1,116 @@
+##Zadatak1##
+
+cd OS-vjezbe/
+mkdir OS-vjezbe2
+cd OS-vjezbe2/
+mkdir -p vjezba_2/data vjezba_2/backup
+touch vjezba_2/data/script.js vjezba_2/data/style.css vjezba_2/data/.env
+cd vjezba_2/data
+echo 'console.log("Hello, World!");' > script.js
+echo 'body { background-color: #f0f0f0; }' > style.css
+echo 'VJEZBE=OS' > .env
+cd ..
+
+
+##Zadatak2##
+
+cp -r data/* backup/
+ls -la backup/
+total 16
+drwxr-xr-x  4 martinailic  staff  128 Mar 27 11:40 .
+drwxr-xr-x  5 martinailic  staff  160 Mar 27 10:46 ..
+-rw-r--r--  1 martinailic  staff   30 Mar 27 11:40 script.js
+-rw-r--r--  1 martinailic  staff   36 Mar 27 11:40 style.css
+cp -r data/.env backup/
+ls -la backup/
+total 24
+drwxr-xr-x  5 martinailic  staff  160 Mar 27 22:18 .
+drwxr-xr-x  5 martinailic  staff  160 Mar 27 10:46 ..
+-rw-r--r--  1 martinailic  staff   10 Mar 27 22:18 .env
+-rw-r--r--  1 martinailic  staff   30 Mar 27 11:40 script.js
+-rw-r--r--  1 martinailic  staff   36 Mar 27 11:40 style.css
+cd data
+ls -laS ../backup
+total 24
+drwxr-xr-x  5 martinailic  staff  160 Mar 27 22:18 .
+drwxr-xr-x  5 martinailic  staff  160 Mar 27 10:46 ..
+-rw-r--r--  1 martinailic  staff   36 Mar 27 11:40 style.css
+-rw-r--r--  1 martinailic  staff   30 Mar 27 11:40 script.js
+-rw-r--r--  1 martinailic  staff   10 Mar 27 22:18 .env
+
+
+##Zadatak3##
+find data -type f ! -name ".env" -exec rm -v {} +
+data/script.js
+data/style.css
+cd data
+ls -la
+total 8
+drwxr-xr-x  3 martinailic  staff   96 Mar 29 10:59 .
+drwxr-xr-x  5 martinailic  staff  160 Mar 27 10:46 ..
+-rw-r--r--  1 martinailic  staff   10 Mar 27 10:51 .env
+cp -vn backup/* data/
+backup/script.js -> data/script.js
+backup/style.css -> data/style.css
+ls -ltA data/
+total 24
+-rw-r--r--  1 martinailic  staff  36 Apr  2 11:47 style.css
+-rw-r--r--  1 martinailic  staff  30 Apr  2 11:47 script.js
+-rw-r--r--  1 martinailic  staff  10 Mar 27 10:51 .env
+
+##Zadatak4##
+ls -lAS
+total 24
+-rw-r--r--@ 1 martinailic  staff  6148 Mar 27 10:46 .DS_Store
+-rw-r--r--  1 martinailic  staff  1838 Apr  2 11:56 vjezba_2.txt
+drwxr-xr-x  5 martinailic  staff   160 Mar 27 10:46 vjezba_2
+ls -lhS | grep -v '^\.'
+total 8
+-rw-r--r--  1 martinailic  staff   1.8K Apr  2 11:56 vjezba_2.txt
+drwxr-xr-x  5 martinailic  staff   160B Mar 27 10:46 vjezba_2
+ls -ltAR
+total 24
+-rw-r--r--  1 martinailic  staff  1838 Apr  2 11:56 vjezba_2.txt
+-rw-r--r--@ 1 martinailic  staff  6148 Mar 27 10:46 .DS_Store
+drwxr-xr-x  5 martinailic  staff   160 Mar 27 10:46 vjezba_2
+
+./vjezba_2:
+total 16
+drwxr-xr-x  5 martinailic  staff   160 Apr  2 11:47 data
+-rw-r--r--@ 1 martinailic  staff  6148 Mar 28 14:38 .DS_Store
+drwxr-xr-x  5 martinailic  staff   160 Mar 27 22:18 backup
+
+./vjezba_2/data:
+total 24
+-rw-r--r--  1 martinailic  staff  36 Apr  2 11:47 style.css
+-rw-r--r--  1 martinailic  staff  30 Apr  2 11:47 script.js
+-rw-r--r--  1 martinailic  staff  10 Mar 27 10:51 .env
+
+./vjezba_2/backup:
+total 24
+-rw-r--r--  1 martinailic  staff  10 Mar 27 22:18 .env
+-rw-r--r--  1 martinailic  staff  36 Mar 27 11:40 style.css
+-rw-r--r--  1 martinailic  staff  30 Mar 27 11:40 script.js
+ls -ltARG
+total 24
+-rw-r--r--  1 martinailic  staff  1838 Apr  2 11:56 vjezba_2.txt
+-rw-r--r--@ 1 martinailic  staff  6148 Mar 27 10:46 .DS_Store
+drwxr-xr-x  5 martinailic  staff   160 Mar 27 10:46 vjezba_2
+
+./vjezba_2:
+total 16
+drwxr-xr-x  5 martinailic  staff   160 Apr  2 11:47 data
+-rw-r--r--@ 1 martinailic  staff  6148 Mar 28 14:38 .DS_Store
+drwxr-xr-x  5 martinailic  staff   160 Mar 27 22:18 backup
+
+./vjezba_2/data:
+total 24
+-rw-r--r--  1 martinailic  staff  36 Apr  2 11:47 style.css
+-rw-r--r--  1 martinailic  staff  30 Apr  2 11:47 script.js
+-rw-r--r--  1 martinailic  staff  10 Mar 27 10:51 .env
+
+./vjezba_2/backup:
+total 24
+-rw-r--r--  1 martinailic  staff  10 Mar 27 22:18 .env
+-rw-r--r--  1 martinailic  staff  36 Mar 27 11:40 style.css
+-rw-r--r--  1 martinailic  staff  30 Mar 27 11:40 script.js
