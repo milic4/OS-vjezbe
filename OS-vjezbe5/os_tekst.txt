@@ -1,0 +1,25 @@
+1. Zadatak
+Priložen screenshot.
+Unutar htop alata vidimo sljedece podatke: 
+PID - prikazuje identifikacijski broj procesa.
+USER - pokazuje korisnika koji je pokrenuo proces, u ovom slučaju moj korisnički račun.
+PRI - označava prioritet procesa u raspoređivanju od strane sustava
+NI - predstavlja vrijednost koja dodatno utječe na prioritet procesa — niža vrijednost znači viši prioritet
+
+VIRT - pokazuje ukupnu količinu virtualne memorije koju proces koristi
+
+RES - označava količinu fizičke memorije u RAM-u koju proces trenutno koristi
+
+CPU% - prikazuje postotak procesorskog vremena koji proces koristi
+MEM% - prikazuje postotak ukupne memorije koju proces koristi
+TIME+ - pokazuje ukupno vrijeme koje je proces proveo koristeći procesor
+COMMAND - prikazuje naziv pokrenutog procesa
+
+Kill po PID-u 1461
+Kill naziv proces - pkill -f hello.py
+Kill prisilno - kill -9 1461
+
+2.Zadatak
+Prilozen screenshot.
+3. Zadatak 
+Prilozen screenshot.
